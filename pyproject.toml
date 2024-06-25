@@ -1,0 +1,23 @@
+﻿name = "Traffic-analyzer-project"
+version = "0.1.0"
+description = "Traffic-analyzer-project is a lightweight application package library written in Python that provides real-time network connection analysis and threat intelligence integration."
+authors = ["a.nyagolov"]
+license = "GNU GENERAL PUBLIC LICENSE Version 3"
+readme = "README.md"
+
+dependencies = [
+  "python >=3.12",
+  "os",
+  "subprocess",
+  "requests >= 2.32.3",
+  "scapy >=2.50",
+  "time",
+  "json",
+  "contextlib",
+]
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
