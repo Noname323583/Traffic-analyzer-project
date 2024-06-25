@@ -20,7 +20,8 @@ sudo python abuse_checker.py
 
 The tool should work on any OS as long as all dependencies are satisfied and it is run with the required permissions.
 
-After the script finishes running, you will see whether each IP address captured from “network_connections.txt” was clean (not abusive) or abusive based on AbuseIPDB's data for the past 20 days. 
+The tool captures traffic using Scapy and it saves ip addresses to “network_connections.txt”.
+The second function of the tool is to run ip adrresess from “network_connections.txt” and prints a verdict: was clean (not abusive) or abusive based on AbuseIPDB's data for the past 20 days. 
 The tool checks both source and destination IP addresses in each line of “network_connections.txt” and skips over any private IP addresses or those that have been checked recently.
 
 Please ensure that you have the necessary permissions to run this script and capture network traffic, as well as a valid AbuseIPDB API key for abuse checking functionality. 
@@ -28,8 +29,8 @@ Please ensure that you have the necessary permissions to run this script and cap
 Configuration:
 To use your own AbuseIPDB API key, replace “abuse_api_key” with your actual API key in the code.
 
-Also, adjust the “days” variable to set how far back you want to check IPs that were checked before (the default is 20 days).
+Also, adjust the “days” variable to set how far back you want to check abuse report of an IP (the default is 20 days).
 
 Output Format:
-The script prints whether each IP address is clean or abusive based on AbuseIPDB's data for the past 20 days. If an error occurs during checking, it will print a message with the error details. 
-For private IP addresses and those that have been  checked recently, it will skip these checks and print a message indicating this.
+The script prints whether each IP address is clean or abusive based on AbuseIPDB' data. If an error occurs during checking, it will print a message with the error details. 
+Private IP addresses and those that have been checked recently, will be skiped with a printed message.
